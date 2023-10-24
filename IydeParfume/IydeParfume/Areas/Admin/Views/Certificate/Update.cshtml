@@ -1,0 +1,35 @@
+﻿@using IydeParfume.Areas.Admin.ViewModels.Certificate
+@model UpdateViewModel
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Certificates</h4>
+            </div>
+            <div class="card-body">
+                <div class="general-label">
+                    <form method="POST" asp-route="admin-certificate-update" enctype="multipart/form-data">
+                        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+
+
+                        <div class="form-group">
+                            <label>Title</label>
+                            <input asp-for="Title" class="form-control">
+                            <span asp-validation-for="Title" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mt-2">
+                            <input asp-for="BackgroundImageInFileSystem" type="hidden">
+                            <img src="~/@Model.BackgroundImageInFileSystem" width="10%" />
+                        </div>
+                        <label>Image</label>
+                        <input asp-for="BackgroundImage" class="form-control">
+
+                        <button type="submit" class="btn btn-primary  mt-2">Submit</button>
+                    </form>
+                </div>
+            </div><!--end card-body-->
+        </div><!--end card-->
+    </div>
+</div>

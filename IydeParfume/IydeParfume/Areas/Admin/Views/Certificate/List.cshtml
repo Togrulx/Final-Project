@@ -1,0 +1,56 @@
+﻿@using IydeParfume.Areas.Admin.ViewModels.Certificate
+@model List<ListItemViewModel>
+
+
+<div class="">
+    <a asp-route="admin-certificate-add" target="_blank" class="btn btn-secondary">Add new certificate</a>
+</div>
+
+<div class="col-lg-12">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">Certificates</h4>
+        </div><!--end card-header-->
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped mb-0">
+                    <thead>
+                        <tr>
+                            <th>image</th>
+                            <th>Title</th>
+                            <th>Created At</th>
+                            <th>Updated At</th>
+
+
+
+
+
+                            <th class="text-end">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+
+                                <tr>
+                                    <td><img src="~/@item.BackgroundImageInFileSystem" width="20%" /></td>
+
+                                    <td>@item.Title</td>
+                                    <td>@item.CreatedAt</td>
+                                    <td>@item.UpdatedAt</td>
+
+                                    <td class="text-end">
+                                    <a asp-route="admin-certificate-update" asp-route-id="@item.Id"><i class="las la-pen text-secondary font-16"></i></a>
+                                    <form class="d-none" method="POST" asp-route="admin-certificate-delete" asp-route-id="@item.Id" id="update-@item.Id">
+                                        </form>
+
+                                        <button type="submit" form="update-@item.Id"><i class="las la-trash-alt text-secondary font-16"></i></button>
+                                    </td>
+                                </tr>
+                        }
+                    </tbody>
+                </table><!--end /table-->
+            </div><!--end /tableresponsive-->
+        </div><!--end card-body-->
+    </div><!--end card-->
+</div>
