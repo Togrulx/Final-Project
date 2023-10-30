@@ -1,0 +1,24 @@
+﻿@using IydeParfume.Areas.Client.ViewModels.AboutUs
+@model List<CertificateViewModel>
+
+
+
+<div class="certifications-section my-5">
+    <div class="container">
+        <h5 class="title">Sertİfİkatlar</h5>
+        <div class="certifications">
+            @foreach (var item in Model)
+            {
+                <div class="certificate-card">
+                    <img src="~/@item.BackGroundImageUrl">
+                    <div class="content">@item.Title</div>
+                </div>
+
+            }
+           
+        </div>
+
+
+    </div>
+</div>
+</div>

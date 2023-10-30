@@ -1,0 +1,88 @@
+﻿@using IydeParfume.Areas.Client.ViewModels.Basket;
+@model List<BasketCookieViewModel>
+
+@foreach (var item in Model)
+{
+    <div class="card-parent">
+        <div class="card">
+            <div class="card-image">
+                <img src="~/@item.ImageUrl" alt="order img">
+            </div>
+            <div class="order-detail">
+                <h6>@item.Title</h6>
+                <div class="card-raiting">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="order-detail-button">
+                    <div class="left">
+                        <div class="quantity">
+                            <span class="quantity-picker">
+                                <a asp-route="client-individual-basket-delete" asp-route-productId="@item.Id" asp-route-sizeId="@item.SizeId" class="minus-btn quantity-modifier modifier-left">–</a>
+                                <input class="quantity-display" type="text" value="@item.Quantity" style="width: 1.6rem;">
+                                <a asp-route="client-basket-add" asp-route-id="@item.Id" class="plus-btn quantity-modifier modifier-right">＋</a>
+                                <input type="hidden" value="@item.SizeId" />
+                            </span>
+                        </div>
+                        @foreach (var item1 in item.Sizes)
+                        {
+                            @if (item.SizeId == item1.Id)
+                            {
+                                <span class="resp-none">@item1.PrSize ml</span>
+                                //bele?ence yes
+                            }
+
+
+                        }
+                    </div>
+                    <div class="right">
+                        <p>
+                            @item.Price
+                            <i class="fa-solid fa-manat-sign"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <a asp-route="client-basket-delete" asp-route-productId="@item.Id" asp-route-sizeId="@item.SizeId" class="deleteCart">
+                <i class="fa-solid fa-xmark"></i>
+                Sil
+            </a>
+        </div>
+    </div>
+
+}
+<div class="card-total">
+    <div class="total-left">
+        <p>
+            Ümumi:
+            <span>
+                ₼@Model!.Sum(pcvm => pcvm.Total)
+                <i class="fa-solid fa-manat-sign"></i>
+            </span>
+        </p>
+        <p>
+            Çatdırılma:
+            <span>
+                0 <i class="fa-solid fa-manat-sign"></i>
+            </span>
+        </p>
+    </div>
+    <div class="total-right">
+        <p>
+            YEKUN:
+            <span>
+                ₼@Model!.Sum(pcvm => pcvm.Total)
+                <i class="fa-solid fa-manat-sign"></i>
+            </span>
+        </p>
+    </div>
+</div>
+<div class="order-complete">
+    <a href="/">Alışverişə qayıt</a>
+    <form method="POST" asp-route="client-order-confirmation" id="submit-form"></form>
+    <button class="greenButton resp-none" form="submit-form" type="submit">Sİfarİşİ tamamla</button>
+    @*<a method="POST" asp-route="client-order-confirmation" class="greenButton resp-none">Sİfarİşİ tamamla</a>*@
+</div>

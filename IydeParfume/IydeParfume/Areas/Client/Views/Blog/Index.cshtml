@@ -1,0 +1,36 @@
+﻿@using IydeParfume.Areas.Client.ViewModels.Blog;
+@model List<BlogViewModel>
+
+
+
+
+<div class="news">
+    <div class="container">
+        <div class="breadCrumb">
+            <a asp-route="client-home-index">İydə Perfumery</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <a asp-route="client-blog-index">Bloglar</a>
+        </div>
+        <div class="news-head">
+            <h5 class="title">BLOGLAR</h5>
+        </div>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4 col-12">
+                    <div class="blog-content">
+                        <a asp-route="client-blogPage-index" asp-route-blogId="@item.Id">
+
+                        <img src="~/@item.BlogDisplays">
+                        </a>
+                    </div>
+                    <div class="blog-body">
+                        <p>@item.Title</p>
+
+                    </div>
+                 
+                </div>
+            }
+        </div>
+    </div>
+</div>

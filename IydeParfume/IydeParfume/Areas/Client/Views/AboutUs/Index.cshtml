@@ -1,0 +1,56 @@
+﻿@using IydeParfume.Areas.Client.ViewComponents;
+@using IydeParfume.Areas.Client.ViewModels.AboutUs;
+@model List<AboutUsViewModel>
+
+
+
+
+<!-- About-->
+<div class="aboutPage">
+    <div class="container">
+        <div class="breadCrumb">
+            <a href="/">İydə Perfumery</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <div>Haqqımızda</div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-12">
+                <div class="about-content">
+                    @foreach(var item in Model)
+                    {
+                    <h1>@item.Title</h1>
+                    <p>@item.Content</p>
+                        <img src="~/@item.AboutUsImages">
+
+                        
+                    }
+                </div>
+            </div>
+            <div class="col-lg-12 col-12">
+                <div class="about-card-section">
+                    @foreach(var item in Model)
+                    {
+                         <div class="about-card">
+                            <h6>@item.Title</h6>
+                        <div class="card-content">
+                                <p>@item.Content</p>
+                        </div>
+                    </div>
+                    }
+                   
+                    
+                    <div class="about-card blackCard">
+                        <h6>ŞİRKƏT RƏHBƏRİNİN MESAJI</h6>
+                        <div class="card-content blckcrdP">
+                            <p>Hisslərin köşəyə tərk edilib, ətirlərin maddiyyat qoxduğu bir zamanda gəldik. Artıq hər ətirə xüsusi diqqət və qayğı göstərmə məqamıdır... Biz duyğuları şüşəyə doldurduq. İydə ətir satmır, sizin öz ətirlərinizi təqdim edir.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@await Component.InvokeAsync(nameof(Certificate))
+
+<!-- About End -->

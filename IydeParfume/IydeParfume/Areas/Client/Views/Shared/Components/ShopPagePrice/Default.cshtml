@@ -1,0 +1,53 @@
+﻿@using IydeParfume.Areas.Client.ViewModels.ShopPage
+@using IydeParfume.Contracts.ProductPrice
+@model List<PriceListItemViewModel>
+
+
+<ul class="list-group" id="myList">
+
+
+    
+    <li class="list-group-item">
+        <a class="select-ca" asp-route="client-shoppage-filter" asp-route-startPriceId="@Price.LOW"> 50dek </a>
+    </li>
+    <li class="list-group-item">
+        <a class="select-ca" asp-route="client-shoppage-filter" asp-route-startPriceId="@Price.MEDIUM">50 - 100 arasi </a>
+    </li>
+    <li class="list-group-item">
+        <a class="select-ca" asp-route="client-shoppage-filter" asp-route-startPriceId="@Price.HİGH">100 - 200 arasi </a>
+    </li>
+    <li class="list-group-item">
+        <a class="select-ca" asp-route="client-shoppage-filter" asp-route-startPriceId="@Price.MOSTHigh">200 den cox </a>
+    </li>
+
+
+
+
+@*    <ul class="list-group" id="myList">
+        <li class="list-group-item">
+            <input class="minPrice" value="0" type="hidden">
+            <input class="MaxPrice" value="50" type="hidden">
+            <a class="searchproductPrice shoppage-url" asp-route="client-shoppage-filter">0-50 <i class="fa-solid fa-manat-sign"></i></a>
+        </li>
+        <li class="list-group-item">
+            <input class="minPrice" value="50" type="hidden">
+            <input class="MaxPrice" value="100" type="hidden">
+            <a class="searchproductPrice shoppage-url" asp-route="client-shoppage-filter">50-100 <i class="fa-solid fa-manat-sign"></i></a>
+        </li>
+        <li class="list-group-item">
+            <input class="minPrice" value="100" type="hidden">
+            <input class="MaxPrice" value="200" type="hidden">
+            <a class="searchproductPrice shoppage-url" asp-route="client-shoppage-filter">100-200 <i class="fa-solid fa-manat-sign"></i></a>
+        </li>
+        <li class="list-group-item">
+            <input class="minPrice" value="200" type="hidden">
+            <input class="MaxPrice" value="500" type="hidden">
+            <a class="searchproductPrice shoppage-url" asp-route="client-shoppage-filter">200+ <i class="fa-solid fa-manat-sign"></i></a>
+        </li>
+        <li class="list-group-item">
+
+            <a href="">Bütün Nəticələr </a>
+        </li>
+    </ul>*@
+
+</ul>

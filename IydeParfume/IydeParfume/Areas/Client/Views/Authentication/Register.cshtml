@@ -1,0 +1,64 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using IydeParfume.Areas.Client.ViewModels.Authentication
+@model RegisterViewModel
+
+
+<div class="auth-login-register d-flex ">
+
+    <div class="left">
+        <a href="" >
+            <img src="~/Client/assets/images/unnamed.jpg" alt="">
+        </a>
+        <p>Daxil olmaq üçün məlumatları doldurun</p>
+    </div>
+
+    <div class="right d-flex align-items-center py-5">
+        <div class="auth-content">
+            <div class="auth-content-header">
+                <a asp-route="client-auth-login"  class="login">GİRİŞ</a>
+                <a asp-route="client-auth-register" class="register text-dark">QEYDİYYAT</a>
+            </div>
+
+          
+
+            <form class="auth-content-body  reg" method="POST" asp-route="client-auth-register">
+                <div class="mb-3">
+                    <input  class="form-control" placeholder="Ad" asp-for="FirstName" type="text" >
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <input class="form-control" placeholder="Soyad" asp-for="LastName" type="text">
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <input name="phone" class="form-control" placeholder="Telefon" asp-for="Phone" type="tel">
+                    <span asp-validation-for="Phone" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <input name="email" class="form-control" placeholder="Email" asp-for="Email" type="email">
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <input class="form-control" placeholder="Şifrə" name="password" asp-for="Password" type="password">
+                </div>
+                <div class="mb-3">
+                    <input class="form-control" placeholder="Təkrar Şifrə" asp-for="ConfirmPassword" type="password">
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+                <div class="input-group">
+                    <button type="submit" class="blackButton">
+                        <i class="fa-regular fa-user"></i>
+                        QEYDİYYAT
+                    </button>
+                </div>
+            </form>
+
+
+            <div class="auth-content-guest">
+                <a asp-route="client-home-index" class="contunie-guest" >Qonaq kimi davam edin</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+

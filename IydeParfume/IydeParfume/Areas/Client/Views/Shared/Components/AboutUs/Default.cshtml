@@ -1,0 +1,29 @@
+﻿@using IydeParfume.Areas.Client.ViewModels.Home
+@model List<AboutUsViewModel>
+
+
+
+
+<div class="contentCategory">
+    <div class="container second">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-5 fir">
+                    <div class="left">
+                        <h1>@item.Title</h1>
+                        <p>@item.Content</p>
+                        <div class="more-category"><a asp-route="client-aboutUs-index" asp-route-aboutUsId="@item.Id">Ətraflı</a></div>
+                    </div>
+                </div>
+                <div class="col-lg-7 sec">
+                    <a asp-route="client-aboutUs-index" asp-route-aboutUsId="@item.Id">
+
+                        <img src="~/@item.AboutUsImages">
+                    </a>
+                </div>
+
+            }
+        </div>
+    </div>
+</div>

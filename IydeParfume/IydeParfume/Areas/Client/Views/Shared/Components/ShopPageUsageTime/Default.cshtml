@@ -1,0 +1,17 @@
+﻿@using IydeParfume.Areas.Client.ViewModels.ShopPage
+@model List<UsageTimeListItemViewModel>
+
+
+
+
+<ul class="list-group" id="myList">
+    @foreach (var item in Model)
+    {
+        <li class="list-group-item">
+
+            <input type="hidden" value="@item.Id" />
+            <a class="select-usageTime" asp-route="client-shoppage-filter" asp-route-usageTimeId="@item.Id">@item.Title</a>
+        </li>
+
+    }
+</ul>

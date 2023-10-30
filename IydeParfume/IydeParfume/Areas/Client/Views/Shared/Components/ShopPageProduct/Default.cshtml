@@ -1,0 +1,39 @@
+﻿@using IydeParfume.Areas.Client.ViewModels.ShopPage;
+@model List<ListItemViewModel>
+
+@foreach (var item in Model)
+{
+    <div class="col-lg-4 col-6">
+        <div class="card" style="width: 18rem;">
+            <a class="image-card" asp-route="client-shop-index" asp-route-id="@item.Id">
+                <img src="~/@item.MainImgUrl" alt="product img" class="aboutImg">
+                <a asp-route="client-basket-add" asp-route-id="@item.Id" class="add-to-basket">
+                    <i class="fa-brands fa-shopify"></i>
+                    SƏBƏTƏ ƏLAVƏ ET
+                    
+                </a>
+            </a>
+            <div class="card-body">
+                <div class="price">
+                    <span>
+                        @item.Price
+                        <i class="fa-solid fa-manat-sign"></i>
+                    </span>
+                    
+                </div>
+                @foreach (var item2 in item.Brand)
+                {
+                    <a class="title" href="">@item2.Title @item.Name</a>
+                }
+                
+                <div class="raiting">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+}

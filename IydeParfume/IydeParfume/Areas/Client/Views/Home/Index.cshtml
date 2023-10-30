@@ -1,0 +1,78 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using IydeParfume.Areas.Client.ViewComponents;
+@using IydeParfume.Areas.Client.ViewModels.Home
+@model IndexViewModel
+
+
+<!-- Slider -->
+<div class="Slider">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+
+        <div class="carousel-inner">
+            @foreach (var slider in Model.Sliders)
+            {
+
+                <div class="carousel-item active">
+                    <img src="~/@slider.BackGroundImageUrl">
+                </div>
+            }
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+<!-- Slider End-->
+<!-- ContentCategory -->
+@await Component.InvokeAsync(nameof(AboutUs))
+
+<!-- ContentCategory End-->
+<!-- Category-->
+<div class="categorySection">
+    <div class="category">
+
+        @foreach (var item in Model.Categories)
+        {
+            <a class="category-box-child a" asp-route="client-shoppage-index" asp-route-categoryId="@item.Id">
+                <img src="~/@item.BImageUrl" alt="category"> 
+                <h4>@item.Title</h4>
+            </a>
+
+        }
+
+    </div>
+    <div class="more-category">
+        <a asp-route="client-shoppage-index">Bütün Ətİrlər</a>
+    </div>
+</div>
+<!-- Category End-->
+
+<!-- Blog -->
+@await Component.InvokeAsync(nameof(Blog)))
+
+<!-- Blog End-->
+<!-- About-->
+<div class="about">
+    <div class="container">
+        <div class="aboutChild">
+            <div class="title">İYDƏ PERFUMERY</div>
+            <div class="content">
+                <h6>Azərbaycan-da orijinal və brend ətirlərin satışı</h6>
+                <p>
+                    İydə parfüm evi Azərbaycan bazarında illərdir ki, ətirlərin satışı ilə məşğuldur. Sizə və sevdiyiniz insanlar üçün original və yüksək keyfiyyətli etir təqdim edirik. Bütün dünyada tanınmış Giorgio Armani, Christian Dior, Montale, Amouge, Dolce&Gabbana kimi məşhur brendlərin və ən əsası qalıcı ətirlərinin Bakıda İydə perfumery-dən əldə edə bilərsiniz. Bu illər ərzində yığdığımız təcrübə, qazandığımız sertifikatlar 100% orijinal ətir olduğunu sübut edir.
+                    <br>
+                    <br>
+                    Ən <a href="">populyar</a>, <a href="">yeni</a> və klassik qalıcı ətirlər <a href="">kişi</a>,
+                    <a href="">qadın</a>, <a href="">unisex</a> və <a href="">uşaq</a> üçün geniş formada Sizin üçün təklif edirik. Bahalı və keyfiyyətli parfüm İydə ilə hər bir şəxs üçün əlçatan oldu.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End-->

@@ -1,0 +1,32 @@
+﻿@using IydeParfume.Database.Models;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model List<Navbar>
+
+
+
+
+<div class="headerBottom">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="navbar justify-content-evenly">
+
+                    @foreach (var navItem in Model)
+                    {
+                        <li class="menu-item">
+                            <a asp-route="@navItem.URL">@navItem.Name</a>
+                            <ul id="drop-menu">
+                                @foreach (var subNav in navItem.SubNavbars)
+                                {
+                                    <li><a asp-route="@subNav.URL">@subNav.Name</a></li>
+                                }
+                            </ul>
+                        </li>
+                    }
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

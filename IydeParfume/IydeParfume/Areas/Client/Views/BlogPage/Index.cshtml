@@ -1,0 +1,31 @@
+﻿@using IydeParfume.Areas.Client.ViewModels.Blog
+@model BlogItemViewModel
+
+
+
+<div class="news-detail">
+    <div class="container">
+        <div class="breadCrumb">
+            <a asp-route="client-home-index">İydə Perfumery</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <a asp-route="client-blog-index">Bloglar</a>
+            <div>@Model.Title</div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                
+                <div class="news-detail-header">
+                    <h5>@Model.Title</h5>
+                    <p>@Model.PostedDate</p>
+                    <img src="~/@Model.Image">
+                </div>
+
+                <div class="news-detail-content">
+                    <span>@Model.Content</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,49 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using IydeParfume.Areas.Client.ViewModels.Authentication
+@model LoginViewModel
+
+<div class="auth-login-register d-flex">
+
+    <div class="left">
+        <a href="">
+            <img src="~/Client/assets/images/unnamed.jpg" alt="">
+        </a>
+        <p>Daxil olmaq üçün məlumatları doldurun</p>
+    </div>
+
+    <div class="right d-flex align-items-center">
+        <div class="auth-content">
+            <div class="auth-content-header">
+                <a asp-route="client-auth-login"  class="login text-dark">GİRİŞ</a>
+                <a asp-route="client-auth-register"  class="register ">QEYDİYYAT</a>
+            </div>
+
+            <form class="auth-content-body log" method="POST" asp-route="client-auth-login">
+                <div class="mb-4">
+                    <input asp-for="Email" type="email"  class="form-control" placeholder="Email">
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="mb-4">
+                    <input asp-for="Password" type="password" class="form-control" placeholder="Şifrə" >
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="input-group">
+                    <button type="submit" class="blackButton">
+                        <i class="fa-regular fa-user"></i>
+                        Daxİl ol
+                    </button>
+                </div>
+            </form>
+
+          
+
+
+            <div class="auth-content-guest">
+                <a asp-route="client-home-index" class="contunie-guest">Qonaq kimi davam edin</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
