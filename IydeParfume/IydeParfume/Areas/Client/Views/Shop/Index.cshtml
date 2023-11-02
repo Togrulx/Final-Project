@@ -1,0 +1,141 @@
+﻿@using IydeParfume.Areas.Client.ViewModels.Shop
+@model ShopViewModel
+
+<!-- Product-Detail -->
+<div class="productDetail">
+    <div class="container">
+        <div class="breadCrumb">
+            <a asp-route="client-home-index">İydə Perfumery</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <a asp-route="client-shoppage-index">Ətirlər</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            @foreach (var item in Model.Brands)
+            {
+                <div>@item.Title @Model.Title</div>
+            }
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="productHeader">
+                    @foreach (var item in Model.Brands)
+                    {
+
+                        <div class="title">@item.Title @Model.Title</div>
+                        <div class="productRaiting">
+                            <span>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <span class="two">(2)</span>
+                            <a href="/">
+                                <p>@item.Title </p>
+                            </a>
+                        </div>
+                    }
+
+                </div>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5">
+                <div class="product-cards">
+                    @foreach (var item in Model.ImgUrl)
+                    {
+                        <div class="card">
+                            <img alt="product img" src="~/@item.ImageUrl">
+                            
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="size-price d-flex justify-content-center align-items-center mt-3">
+                    <span style="width: 25rem;font-size: 26px;font-weight: 600">Ətrin Həcmini Seçin :</span>
+                
+                    <select class="form-select size-cart" style="width:67%"  asp-for="SizeId"  asp-items="@(new SelectList(Model.Sizes, nameof(ShopViewModel.SizeViewModeL.Id), nameof(ShopViewModel.SizeViewModeL.Title)))">
+                    </select>
+                    <input type="hidden" value="@Model.SizeId" />
+                
+               
+
+                </div>
+                <div class="product-detail-buttons justify-content-center">
+                   
+
+                    <a asp-route="client-basket-add" asp-route-id="@Model.Id" class="addToCard add-product-to-basket-single-btn ">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                        Səbətə əlavə et
+                    </a>
+
+
+
+                </div>
+                <div class="product-detail-tabs mb-5">
+                    <ul>
+                        <li id="show-indigarors">GÖSTƏRİCİLƏR</li>
+                        <li id="info-detail">MƏLUMAT</li>
+                    </ul>
+                    <div class="product-detail-indicators ">
+                        <div class="IndicatorsChild ind1">
+
+                            <p>
+                                Brend:
+                                @foreach (var item in Model.Brands)
+                                {
+                                <a href="/products?brand=bvlgari">@item.Title</a>
+                                }
+                            </p>
+                            <p>
+                                Cins:
+                                @foreach (var item in Model.Categories)
+                                {
+                                    <a href="/products?gender=female">@item.Title</a>
+                                    
+                                }
+                            </p>
+
+                            <p>
+                                Fəsil:
+                                @foreach (var item in Model.Seasons)
+                                {
+                                    <span>@item.Title</span>
+                                }
+                            </p>
+
+                        </div>
+                        <div class="IndicatorsChild ind2">
+                            <p>
+                                Qruplar:
+                                @foreach (var item in Model.Groups)
+                                {
+                                    <a href="/products?group=oriental">@item.Title</a>
+                                }
+                            </p>
+
+                            <p>
+                                Gündüz/Gecə:
+                                @foreach (var item in Model.UsageTimes)
+                                {
+                                    <span>@item.Title</span>
+                                }   
+                            </p>
+                            <p class="text-dark " style="font-weight:600">
+                                Qiyməti:@Model.Price  <i class="fa-solid fa-manat-sign"></i>
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="product-detail-info d-none">
+                        
+                        <p>@Model.Description</p>
+                    </div>
+                </div>
+            </div>
+         
+
+        </div>
+    </div>
+</div>
+<!-- Product-Detail End -->

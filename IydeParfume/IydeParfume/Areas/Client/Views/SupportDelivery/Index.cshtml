@@ -1,0 +1,60 @@
+﻿@using IydeParfume.Areas.Client.ViewModels.SupportDelivery;
+@model List<ListItemViewModel>
+
+
+<!-- Support Delivery -->
+<div class="delivery-section ">
+    <div class="container">
+        <div class="breadCrumb">
+            <a href="/">İydə Perfumery</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <div>Çatdırılma</div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-12">
+                <div class="deliveryMain">
+                    <div class="deliveryHeader">
+                        <h4>Çatdırılma</h4>
+                    </div>
+                    <div class="deliveryBody">
+                        <p>
+                            <strong>Çatdırılma şərtləri və müddəti:</strong>
+                        </p>
+                        <ul>
+                            <li>
+                                <strong>
+                                    Bakı şəhəri üzrə çatdırılma&nbsp;
+                                </strong>Çatdırılma xidməti Bakı şəhəri üzrə kuryerimiz vasitəsi ilə operativ şəkildə, sizin üçün münasib ünvana həyata keçirilir. Şəhər daxili çatdırılması üçün ətirin dəyəri minimal olaraq 30 AZN-dən aşağı olmamalıdır.
+                            </li>
+                            <li>
+                                <strong>
+                                    Sumqayıt şəhərinə çatdırılma
+                                </strong>Sumqayıt şəhərinə çatdırılma sifariş edildikdən sonra gün ərzində razılaşdırılmış ünvana həyata keçirilir. Ətirin dəyəri minimal olaraq 30 AZN-dən aşağı olmamalıdır. Çatdırılma xidmətin iş rejimi 10:00-dan 20:00-a qədərdir.
+                            </li>
+                            <li>
+                                <strong>
+                                    Azərbaycanın rayonlarına çatdırılma
+                                </strong>Azərbaycanın rayonlarına çatdırılma sifarişin tam dəyərinin əvvəlcədən ödənilməsi şərti ilə (ödəmə şərtləri ilə burada tanış ola bilərsiniz) 1-2 gün ərzində həyata keçirilir. Ətirin dəyəri minimal olaraq 50 AZN-dən aşağı olmamalıdır.
+                            </li>
+                            <li>
+                                <strong>
+                                    Beynəlxalq çatdırılma&nbsp;
+                                </strong>Xarici ölkələrədə Kargo vasitəsi ilə çatdırılma mümkündür. Ətirin dəyəri minimal olaraq 50 AZN-dən aşağı olmamalıdır və Kargo ödənişi əlavə olunur.
+                            </li>
+                            @foreach (var item in Model)
+                            {
+                                <li>
+                                    <strong>
+                                        @item.Title
+                                    </strong>@item.Content
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Support Delivery End -->

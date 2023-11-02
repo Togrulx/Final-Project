@@ -1,0 +1,41 @@
+﻿@using IydeParfume.Areas.Client.ViewModels.SupportOrder;
+@model List<SupportOrderViewModel>
+
+
+<!-- Support Order -->
+<div class="supportOrder-section ">
+    <div class="container">
+        <div class="breadCrumb">
+            <a href="/">İydə Perfumery</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <div>Sifariş Etmək</div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-12">
+                <div class="supportOrderMain">
+                    <h3>Sifarişi necə etmək olar?</h3>
+                    <p>Siz aşağıdakı üsullarla sifariş edə bilərsiniz:</p>
+                    <ul>
+                        <li>&nbsp;Onlayn sifariş etmək</li>
+                    </ul>
+                    <p>Onlayn sifariş etmək - bunun üçün ilk öncə saytımızda&nbsp;<a href="Login-Register.html" target="_blank">qeydiyyatdan keçmək</a>&nbsp;lazımdır, seçdiyiniz ətirləri səbətə əlavə edikdən sonra sifarişinizi tamamlayırsınız. Saytdan sifariş etdiyiniz zaman xahiş olunur ki,bütün boş xanaları mütləq doldurasınız – bu məlumatları sizdən maraq üçün deyil, sifarişinizin düzgün tərtib edilməsi və operativ şəkildə çatdırılması üçün gərəkdir. Sifariş etdiyiniz zaman Sizə uyğun olan əlverişli ödəniş üsulunu seçə bilərsiniz (<a href="Support-Payment.html" target="_blank">ödəniş yolları haqda daha ətraflı burada tanış ola bilərsiniz</a>).</p>
+                    <ul>
+                        <li>Bizə zəng edərək sifariş etmək.</li>
+                    </ul>
+                    <p>Bizim əlaqə nömrələrimizi<a href="Contact.html" target="_blank">&nbsp;burada</a>&nbsp;tapa bilərsiniz</p>
+                   
+                    @foreach (var item in Model)
+                    {
+                        <ul>
+                            <li>@item.Title</li>
+                        </ul>
+                        <p>@item.Content</p>
+                    }
+                    <p><a href="https://www.facebook.com/iyde.az" target="_blank">Facebook</a>&nbsp;və&nbsp;<a href="https://www.instagram.com/iydeperfumery/" target="_blank">Instagram</a>&nbsp;sosial şəbəkələrdə bizə müraciət edib, şirkətimizdə baş verən YENİLİK-lər haqqında ilk siz məlumatlı olun.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Support Order End -->

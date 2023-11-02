@@ -1,0 +1,56 @@
+﻿@using IydeParfume.Areas.Client.ViewModels.SupportPayment;
+@model List<ListItemViewModel>
+
+<!-- Support Payment -->
+<div class="payment-section ">
+    <div class="container">
+        <div class="breadCrumb">
+            <a href="/">İydə Perfumery</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <div>Ödəmə</div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-12">
+                <div class="paymentMain">
+                    <div class="paymentHeader">
+                        <h4>Ödəmə</h4>
+                    </div>
+                    <div class="paymentBody">
+                        <h3>Onlayn ödəniş</h3>
+                        <ul>
+                            <li>İstənilən kredit və debet kartları ilə ödəniş qəbul olunur;</li>
+                            <li>Bank kartı İnternetdə ödəniş üçün yararlı olmalıdır (bu, bank tərəfindən müəyyən olunur);</li>
+                            <li>Sifarişin bank kartı vasitəsilə onlayn ödənişi zamanı, ödəmə prosesi elektron ödənişlər sisteminin saytında həyata keçirilir.</li>
+                        </ul>
+                        <p>Qeyd etdiyiniz məlumatlar – kartın rekvizitləri, qeydiyyat məlumatları bizim onlayn mağazamızın işçiləri tərəfindən baxıla bilmir. Bütün məxfi məlumatlar müştəridən ödəniş sistemininə və bankın serverinə ötürülür. Saytımızda onlayn ödənişi seçərək, Siz sifarişiniz üçün ən sürətli və təhlükəsiz ödəniş üsulunu seçmiş olursunuz.</p>
+                        <p>Onlayn ödəniş zamanı sizin kartlarınız və pul vəsaitiniz barədə məlumat bizə daxil olmur, ödəniş bank və ödəniş sistemləri vasitəsilə həyata keçirilir. Onlayn ödəniş üsulunu seçdikdən və sifarişi təsdiq etdikdən sonra Siz avtomatik olaraq əməkdaşlıq etdiyimiz bankın və ödəniş sisteminin mühafizə olunan səhifəsinə yönəldilirsiniz.</p>
+                        <p>Sizin ödənişiniz onlayn ödənişin beynəlxalq təhlükəsizlik standartlarına uyğun olaraq həyata keçiriləcək.</p>
+                        <p>&nbsp;</p>
+                        <p>Ödəniş zamanı Yalnız Azərbaycan Respublikasının milli valyutası – AZN ödənişə qəbul olunur.</p>
+                        <ul>
+                            <li>Kuryer vasitəsi ilə çatdırılma zamanı ödəniş nağd, "Card to Card"&nbsp;və ya POS terminalnan qəbul olunur.</li>
+                        </ul>
+                        <ul>
+                            <li>MilliÖN, E-manat, Expresspay terminalları ilə ödəniş.</li>
+                        </ul>
+                        <ul>
+                            <li>Bank və poçt köçürmələri ilə ödəniş</li>
+                        </ul>
+                        <p>Bu ödəniş üsulu Azərbaycan bölgələrinə çatdırılma ilə sifariş etdiyiniz və onlayn ödəyə bilmədiyiniz zaman tətbiq olunur.&nbsp;</p>
+                        <p>Nəzərə almağınızı xahiş edirik ki, sifariş Azərbaycanın bölgələrinə çatdırılan zamanı sifarişin dəyəri 100% əvvəlcədən ödənilməlidir. Çatdırılma haqqında daha ətraflı məlumatı <a href="Delivery.html">buradan</a> əldə edə bilərsiniz.</p>
+                        @foreach (var item in Model)
+                        {
+                            <h3>@item.Title</h3>
+                            <ul>
+                                <li>@item.Content</li>
+                            </ul>
+                            <p>@item.Note</p>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Support Payment End -->
