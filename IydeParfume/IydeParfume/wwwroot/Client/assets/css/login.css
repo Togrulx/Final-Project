@@ -1,0 +1,132 @@
+.auth-login-register {
+  width: 100%;
+  height: 47rem;
+}
+.auth-login-register .auth-content {
+  width: 60%;
+}
+.auth-login-register .auth-content .auth-content-guest {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.auth-login-register .auth-content .auth-content-guest a {
+  color: black;
+  font-size: 16px;
+  border-bottom: 1px solid black;
+  transition: 0.5s;
+}
+.auth-login-register .auth-content .auth-content-guest a:hover {
+  border-bottom: 1px solid #FF0852;
+  color: #FF0852;
+}
+.auth-login-register .left {
+  align-items: center;
+  background: #000000;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  width: 45%;
+}
+.auth-login-register .left a {
+  width: 30%;
+}
+.auth-login-register .left img {
+  width: 100%;
+}
+.auth-login-register .left p {
+  color: #fdfcfc;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  line-height: 164.4%;
+}
+.auth-login-register .right {
+  background: #f6f5f5;
+  flex-direction: column;
+  width: 55%;
+  justify-content: center;
+}
+.auth-login-register .right .auth-content-header {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.2rem;
+}
+.auth-login-register .right .auth-content-header .register {
+  border-left: 0.1rem solid hsla(0, 0%, 7%, 0.35);
+  padding-left: 1.6rem;
+}
+.auth-login-register .right .auth-content-header #log {
+  opacity: 1;
+}
+.auth-login-register .right .auth-content-header a {
+  margin-right: 1.6rem;
+  color: rgba(18, 18, 18, 0.3803921569);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 3.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.auth-login-register .right .auth-content-header a.active {
+  opacity: 1;
+}
+.auth-login-register .right .auth-content-body input {
+  border-radius: 15px;
+  padding-left: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #EDEDED;
+  font-size: larger;
+  opacity: 0.7;
+}
+.auth-login-register .right .auth-content-body .input-group {
+  align-items: center;
+  display: flex;
+  margin-bottom: 2.4rem;
+}
+.auth-login-register .right .auth-content-body .input-group .blackButton {
+  align-items: center;
+  background: #121212;
+  border: none;
+  border-radius: 3rem;
+  color: #fdfcfc;
+  display: flex;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  height: 58px;
+  justify-content: center;
+  letter-spacing: 0.1em;
+  line-height: 2.1rem;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  width: 100%;
+}
+.auth-login-register .right .auth-content-body .input-group .blackButton:hover {
+  background: #700022;
+}
+.auth-login-register .right .auth-content-body .input-group .blackButton i {
+  margin-right: 1rem;
+}
+
+@media (max-width: 576px) {
+  .auth-login-register .left {
+    display: none;
+  }
+  .auth-login-register .right {
+    width: 100% !important;
+  }
+  .auth-login-register .right .auth-content {
+    width: 95%;
+  }
+  .auth-login-register .right .auth-content-header a {
+    font-size: 20px;
+  }
+}/*# sourceMappingURL=login.css.map */

@@ -1,0 +1,131 @@
+.delivery-section .breadCrumb {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+}
+.delivery-section .breadCrumb i {
+  font-size: 11px;
+  margin: 0 10px;
+}
+.delivery-section .breadCrumb div {
+  border: none;
+  border-bottom: 0.1rem solid transparent;
+  color: #000;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  line-height: 1.3rem;
+  opacity: 0.4;
+  padding-bottom: 4px;
+  pointer-events: none;
+  position: static;
+  text-transform: inherit;
+  transition: 0.5s;
+}
+.delivery-section .breadCrumb a {
+  border-bottom: 0.1rem solid #000;
+  color: #000;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  line-height: 1.3rem;
+  padding-bottom: 0.4px;
+  position: relative;
+  transition: 0.5s;
+  z-index: 3;
+}
+.delivery-section .breadCrumb a:hover {
+  color: #FF0878;
+  border-bottom: 0.1rem solid #FF0878;
+}
+.delivery-section .deliveryMain {
+  padding: 4rem 6rem 2rem;
+}
+.delivery-section .deliveryHeader {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.delivery-section .deliveryHeader h4 {
+  color: #121212;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 3.8rem;
+  text-transform: uppercase;
+}
+.delivery-section .deliveryBody p {
+  display: block;
+  margin-left: 2rem;
+}
+.delivery-section .deliveryBody p strong {
+  color: #121212;
+  display: block;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 144%;
+  margin-bottom: 2rem;
+  padding-left: 0;
+}
+.delivery-section .deliveryBody ul li {
+  color: #121212;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  line-height: 155%;
+  margin-bottom: 4rem;
+  opacity: 0.8;
+}
+.delivery-section .deliveryBody ul li strong {
+  color: #121212;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 155%;
+  display: block;
+  letter-spacing: 0.05em;
+  margin: 0.8rem 0;
+  position: relative;
+}
+.delivery-section .deliveryBody ul li strong:after {
+  background-color: #ff0852;
+  border-radius: 50%;
+  content: "";
+  height: 0.7rem;
+  left: -1.2rem;
+  position: absolute;
+  top: 0.6rem;
+  width: 0.7rem;
+}
+
+@media (max-width: 576px) {
+  .delivery-section .deliveryMain {
+    padding: 0;
+  }
+  .delivery-section .breadCrumb {
+    display: none;
+  }
+  .delivery-section .deliveryHeader {
+    align-items: flex-start;
+    margin-bottom: 0.4rem;
+    justify-content: start;
+  }
+  .delivery-section .deliveryHeader h4 {
+    font-size: 14px;
+    line-height: 1.6rem;
+    text-align: left;
+  }
+  .delivery-section .deliveryBody p {
+    font-size: 14px;
+    line-height: 155%;
+    margin-left: 0;
+  }
+}/*# sourceMappingURL=delivery.css.map */

@@ -1,0 +1,207 @@
+.aboutPage{
+    .breadCrumb{
+        align-items: center;
+        display: flex;
+        justify-content: flex-start;
+        i{
+            font-size: 11px;
+            margin: 0 10px;
+        }
+        div{
+            border: none;
+            border-bottom: 0.1rem solid transparent;
+            color: #000;
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 600;
+            letter-spacing: .05em;
+            line-height: 1.3rem;
+            opacity: .4;
+            padding-bottom: 4px;
+            pointer-events: none;
+            position: static;
+            text-transform: inherit;
+            transition: .5s;
+        }
+        a{
+            border-bottom: 0.1rem solid #000;
+            color: #000;
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 600;
+            letter-spacing: .05em;
+            line-height: 1.3rem;
+            padding-bottom: 0.4px;
+            position: relative;
+            transition: .5s;
+            z-index: 3;
+            &:hover{
+                color: #FF0878;
+                border-bottom: 0.1rem solid #FF0878;
+            }
+        }
+    }
+    .about-content{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 3.5rem;
+    h1{
+        color: #121212;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: .05em;
+        text-transform: uppercase;
+        font-size: 48px;
+        margin-bottom: 4rem;
+    }
+    h6{
+        font-size: 32px;
+        border-bottom: 0.15rem solid #121212;
+        line-height: 2.8rem;
+        margin-bottom: 2.4rem;
+        padding-bottom: 1rem;
+        font-weight: 600;
+    }
+    p{
+        color: #121212;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: .05em;
+        line-height: 2.3rem;
+        width: 56%;
+    }
+    img{
+        border-radius: 3rem;
+        height: 40.8rem;
+        object-fit: contain;
+        width: 100%;
+    }
+    }
+    .about-card-section{
+        display: flex;
+        flex-direction: column;
+        padding: 0 8rem;
+        .about-card{
+            align-items: center;
+            border: 0.1rem solid #d6d6d6;
+            border-radius: 1.5rem;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 1rem;
+            padding: 4rem 0;
+            h6{
+                color: #121212;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 700;
+                letter-spacing: .05em;
+                line-height: 2.8rem;
+                margin-bottom: 1rem;
+                text-align: center;
+                text-transform: uppercase;
+            }
+            .card-content{
+                width: 60%;
+                p{
+                    color: #121212;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 600;
+                    letter-spacing: .05em;
+                    line-height: 164.4%;                  
+                }
+            }
+        }
+        .blackCard{
+            background-color: #000000;
+            h6{
+                color: white;
+            }
+            .blckcrdP{
+                background-color: 000000;
+                p{
+                    color: white;
+                }
+            }
+        }
+    }
+
+}
+.certifications-section{
+    .title{
+        color: #121212;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: .05em;
+        line-height: 3.8rem;
+        margin-bottom: 3.2rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .slick-next{
+        display: none;
+    }
+    .certificate-card{
+        align-items: center;
+        background: #fefefe;
+        box-shadow: 0 8px 20px hsl(0deg 0% 77% / 20%);
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        margin:0 1rem;
+        padding: 3.2rem;
+    }
+}
+
+@media (max-width:576px)  {
+    .breadCrumb{
+        display: none !important;
+    }
+    .about-card-section{
+        padding: 0 !important;
+        .about-card{
+            margin-bottom: 2.2rem !important;
+            padding: 2rem 1.7rem !important;
+            h6{
+                font-size: 24px !important;
+                line-height: 2.8rem !important;
+            }
+            .card-content{
+                width: 100% !important;
+                p{
+                    font-size: 14px !important;
+                    line-height: 164.4% !important;
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+    .about-content{
+        h1{
+            font-size: 24px !important;
+            line-height: 2.8rem !important;
+            margin-bottom: 1.5rem !important;
+        }
+        h6{
+            font-size: 20px !important;
+            line-height: 2.3rem !important;
+            margin-bottom: 1.5rem !important;
+            padding: 0 1rem 1.2rem !important;
+        }
+        p{
+            font-size: 14px !important;
+            line-height: 164.4% !important;
+            width: 100% !important;
+        }
+        img{
+            height: 15rem !important;
+           
+        }
+        }
+    }

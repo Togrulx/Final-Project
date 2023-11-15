@@ -1,0 +1,262 @@
+.contactPage{
+    .breadCrumb{
+        align-items: center;
+        display: flex;
+        justify-content: flex-start;
+        i{
+            font-size: 11px;
+            margin: 0 10px;
+        }
+        div{
+            border: none;
+            border-bottom: 0.1rem solid transparent;
+            color: #000;
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 600;
+            letter-spacing: .05em;
+            line-height: 1.3rem;
+            opacity: .4;
+            padding-bottom: 4px;
+            pointer-events: none;
+            position: static;
+            text-transform: inherit;
+            transition: .5s;
+        }
+        a{
+            border-bottom: 0.1rem solid #000;
+            color: #000;
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 600;
+            letter-spacing: .05em;
+            line-height: 1.3rem;
+            padding-bottom: 0.4px;
+            position: relative;
+            transition: .5s;
+            z-index: 3;
+            &:hover{
+                color: #FF0878;
+                border-bottom: 0.1rem solid #FF0878;
+            }
+        }
+    }
+    .contactMain{
+        padding-top: 5rem;
+        padding-bottom: 1rem;
+        .contactHeader{
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 4rem;      
+            h4{
+                color: #121212;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 700;
+                letter-spacing: .08em;
+                line-height: 3.8rem;
+                margin-bottom: 0.8rem;
+                text-transform: uppercase;
+            }    
+            .jobTime{
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                p{
+                    color: #121212;
+                    font-size: 24px;
+                    font-weight: 400;
+                    letter-spacing: .05em;
+                    line-height: 2.8rem;
+                    text-align: center;
+                    width: 70%;           
+                }
+            }
+        }
+        .contactBody{
+            .contactIcons{
+                align-items: center;
+                display: flex;
+                justify-content: space-evenly;
+                a{
+                    align-items: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    svg{
+                        height: 5.3rem;
+                        margin-bottom: 1.6rem;
+                        width: 6.3rem;         
+                    }
+                    span{
+                        color: #000;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 500;
+                        letter-spacing: .05em;
+                        line-height: 2.8rem;          
+                    }
+                }
+            }
+            .contactForm{
+                margin-top: 3rem;
+                h4{
+                    margin-bottom: 24px;
+                    text-align: center;
+                    color: #121212;
+                    font-size: 32px;
+                    font-style: normal;
+                    font-weight: 600;
+                    letter-spacing: .08em;
+                    line-height: 3.8rem;
+                    text-transform: uppercase;
+                }
+                .contactFormInputs{
+                    display: flex;
+                    justify-content: space-evenly;
+                    width: 100%;
+                    .left{
+                        width: 45%;
+                        input{
+                           border-radius: 15px;
+                           padding-left: 2rem;
+                           padding-top: 1rem;
+                           padding-bottom: 1rem;
+                           background-color: #EDEDED;
+                           font-size: larger;
+                           opacity: .7;
+                        }
+                    }
+                  
+                    .right{
+                        width: 45%;
+                        input{
+                        border-radius: 15px;
+                        padding-left: 2rem;
+                        padding-top: 1rem;
+                        padding-bottom: 12rem;
+                        background-color: #EDEDED;
+                        font-size: larger;
+                        opacity: .7;
+                        height: 15rem;
+                        width: 32rem;
+                       }
+                       }
+                    }
+                    .input-group {
+                     align-items: center;
+                     display: flex;
+                     margin-bottom: 2.4rem;
+                     padding: 0 3rem;
+                     .blackButton{
+                         align-items: center;
+                         background: #121212;
+                         border: none;
+                         border-radius: 3rem;
+                         color: #fdfcfc;
+                         display: flex;
+                         font-size: 18px;
+                         font-style: normal;
+                         font-weight: 600;
+                         height: 58px;
+                         justify-content: center;
+                         letter-spacing: .1em;
+                         line-height: 2.1rem;
+                         text-align: center;
+                         text-transform: uppercase;
+                         transition: .5s;
+                         width: 30%;
+                         &:hover{
+                             background: #700022;
+                         }
+                         i{
+                             margin-right: 1rem;
+                         }
+                     }
+                 }
+            }
+        }
+    }
+}
+
+@media (max-width:576px) {
+    .breadCrumb{
+        display: none !important;
+    }
+    .contactMain{
+        .contactHeader{
+            align-items: flex-start !important;
+            margin-bottom: 1.4rem !important;
+            h4{
+                font-size: 14px !important;
+                line-height: 1.6rem !important;
+                text-align: left !important;
+                margin-top: 2rem !important;
+            }
+            .jobTime{
+                justify-content: flex-start !important;   
+                p{
+                    align-items: center !important;
+                    display: flex !important;
+                    font-size: 14px !important; 
+                    line-height: 1.6rem !important; 
+                    white-space: nowrap !important;          
+                }      
+            }
+        }
+        .contactIcons{
+            flex-wrap: wrap !important;
+            justify-content: flex-start !important;
+            a{
+                margin-bottom: 46px !important;
+                width: 50% !important;
+                svg{
+                    width: 3rem !important;
+                    height: 2rem !important;
+                }
+                span{
+                    font-size: 16px !important;
+                    line-height: 1.9rem !important;
+                }
+            }
+        }
+        .contactForm{
+            h4{
+                font-size: 24px !important;
+                line-height: 2.8rem !important;
+                margin-bottom: 22px !important;
+                text-align: left !important;
+            }
+            .contactFormInputs{
+                display: flex !important;
+                flex-direction: column !important;
+                .left{
+                    width: 100% !important;
+                    input{
+                        font-size: 18px !important;
+                    }
+                    
+                }
+                .right{
+                    width: 100% !important;
+                    input{
+                        font-size: 18px !important;
+                        width: 100% !important;
+                    }
+                }
+            }
+            .input-group{
+                padding: 0 !important;
+                .blackButton{
+                    order: 3 !important;
+
+                    font-size: 18px !important;
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+}

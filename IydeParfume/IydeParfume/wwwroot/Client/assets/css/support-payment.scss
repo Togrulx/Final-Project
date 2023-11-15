@@ -1,0 +1,140 @@
+.payment-section{
+    .breadCrumb{
+        align-items: center;
+        display: flex;
+        justify-content: flex-start;
+        i{
+            font-size: 11px;
+            margin: 0 10px;
+        }
+        div{
+            border: none;
+            border-bottom: 0.1rem solid transparent;
+            color: #000;
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 600;
+            letter-spacing: .05em;
+            line-height: 1.3rem;
+            opacity: .4;
+            padding-bottom: 4px;
+            pointer-events: none;
+            position: static;
+            text-transform: inherit;
+            transition: .5s;
+        }
+        a{
+            border-bottom: 0.1rem solid #000;
+            color: #000;
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 600;
+            letter-spacing: .05em;
+            line-height: 1.3rem;
+            padding-bottom: 0.4px;
+            position: relative;
+            transition: .5s;
+            z-index: 3;
+            &:hover{
+                color: #FF0878;
+                border-bottom: 0.1rem solid #FF0878;
+            }
+        }
+    }
+    .paymentMain{
+        padding: 4rem 6rem 2rem;
+
+    }
+    .paymentHeader{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 2rem;
+        h4{
+            color: #121212;
+            font-size: 3.2rem;
+            font-style: normal;
+            font-weight: 700;
+            letter-spacing: .08em;
+            line-height: 3.8rem;
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;        
+        }
+    }
+    .paymentBody{
+        color: #121212;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: .08em;
+        line-height: 3.8rem;
+        margin-bottom: 0.8rem;
+        text-transform: uppercase;
+        ul li{
+            list-style: none;
+            color: #121212;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            letter-spacing: .05em;
+            line-height: 155%;
+            margin-bottom: 0.6rem;
+            padding-left: 0.4rem;
+            position: relative;  
+            &:after{
+                background: #ff0852;
+                border-radius: 50%;
+                content: "";
+                height: .5rem;
+                left: -1rem;
+                position: absolute;
+                top: .6rem;
+                width: .5rem;
+            }       
+        }
+        p{
+            color: #121212;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 155%;
+            margin-bottom: 1.4rem;
+            opacity: .7;
+            a{
+                color: #ff0852;
+            }
+        }
+    }
+}
+@media (max-width:576px) {
+    .payment-section{
+        .breadCrumb{
+            display: none;
+        }
+        .paymentMain{
+            padding: 0;
+    
+        }
+        .paymentHeader{
+            align-items: flex-start;
+            margin-bottom: 0;
+            h4{
+                font-size: 14px;
+                line-height: 1.6rem;
+                text-align: left;          
+            }
+        }
+        .paymentBody{
+            h3{
+                font-size: 20px;
+            }
+            ul li{
+                font-size: 14px;
+            }
+            p{
+                font-size: 14px;
+            }
+        }
+    }
+}
